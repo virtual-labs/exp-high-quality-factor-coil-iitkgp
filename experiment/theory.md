@@ -67,3 +67,4 @@ Solving the above two equations(1) and (2), we have,
 
 
 The Quality factor of the coil `Q = (omegaL_1)/R_1 = 1/(omegaC_4R_4)`.
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
