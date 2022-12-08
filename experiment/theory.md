@@ -17,17 +17,16 @@ Let,
 
 At Balance,
 
-$$ (R_1+j*\omega * L_1)*(R_4 - \frac{j}{\omega * C_4 })=R_2*R_3 $$
+$$ (R_1 + j * \omega * L_1) * (R_4 - \frac{j}{\omega * C_4 }) = R_2 * R_3 $$
 
-$$ R_1*R_4+ \frac{L_1}{C_4} +j*\omega * L_1*R_4 - j*\frac{R_1}{(\omega * C_4) }= R_2*R_3 $$
-
-
+$$ R_1 * R_4 + \frac{L_1}{C_4} + j * \omega * L_1 * R_4 - j * \frac{R_1}{(\omega * C_4) }= R_2 * R_3 $$
 
 separating the real and imaginary terms, we get
 
 $$ R_1R_4 + \frac{L_1}{C_4} = R_2R_3 . . . . . . . . . (1) $$
 
-$$ j*\omega*L_1R_4 - \frac{jR_1}{\omega C_4 }= 0 . . . . . . (2) $$
+
+$$ j * \omega * L_1R_4 - \frac{jR_1}{\omega C_4 } = 0 . . . . . . (2) $$
 
 
 Solving the above two equations(1) and (2), we have,
