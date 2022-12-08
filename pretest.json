@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Hay’s bridge is particularly useful for measuring",
+      "answers": {
+        "a": "Inductive impedance with large phase angle",
+        "b": "Capacitance and dielectric loss",
+        "c": "Mutual inductance",
+        "d": "Self inductance"
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is correct",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The four arms of the Hay Bridge, are arranged as follows. AB: consists with unknown impedance. BC: non-inductive resistor of 16800 `&#x2126;`. CD: consists of non-inductive resistor of 950 `&#x2126;` in series with a standard capacitor of 1.57 uF. DA:non-inductive resistor of 1000 `&#x2126;`.The supply frequency is 50 Hz. Determine the inductance and resistance of the unknown impedance at balance condition",
+      "answers": {
+        "a": "R<sub>1</sub>=4190`&#x2126;` and L<sub>1</sub>=31.7H",
+        "b": "R<sub>1</sub>=1190`&#x2126;` and L<sub>1</sub>=11.7H",
+        "c": "R<sub>1</sub>=2190`&#x2126;` and L<sub>1</sub>=21.7H",
+        "d": "R<sub>1</sub>=3190`&#x2126;` and L<sub>1</sub>=21.7H"
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
