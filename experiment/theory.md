@@ -11,8 +11,8 @@
 ***Fig 1: Circuit diagram for measurement of self inductance of high quality factor coil by Hay's bridge***
 
 Let,
-     L<sub>1</sub>= Unknown inductance having resistance R<sub>1</sub>.
-     R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>= known non inductive resistance.
+     L<sub>1</sub>= Unknown inductance having resistance R<sub>1</sub>. <br>
+     R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>= known non inductive resistance. <br>
      C<sub>4</sub> = Standard capacitor.
 
 At Balance,
