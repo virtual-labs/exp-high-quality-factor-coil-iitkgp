@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The Hay’s bridge is suitable for the measurement of inductances of coils with Q factor",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Less than 10",
+        "b": "More than 10",
+        "c": "More than 1",
+        "d": "Less than 1"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (b).",
+        "b": "You have choosen option (b). The answer is correct",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (b).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (b)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If C<sub>4</sub> is the capacitance and R<sub>4</sub> is the resistance of Hay’s bridge, then the Q factor of Hay’s bridge is given by",
+      "answers": {
+        "a": "1/(ωC<sub>4</sub>R<sub>4</sub>)",
+        "b": "(ωC<sub>4</sub>)/R<sub>4</sub>",
+        "c": "(ωR<sub>4</sub>)/C<sub>4</sub>",
+        "d": "ωC<sub>4</sub>R<sub>4</sub>"
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is correct",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "A Maxwell's capacitance bridge is used to measure an unknown inductance in comparison with capacitance. The various values at balance: R<sub>2</sub>=400`&#x2126;`, R<sub>3</sub>=600`&#x2126;`, R<sub>4</sub>=1000`&#x2126;` ; C<sub>4</sub>=0.5uF. Calculate the values of R<sub>1</sub> and L<sub>1</sub>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "R<sub>1</sub>=140 `&#x2126;` and L<sub>1</sub>=0.52 H",
+        "b": "R<sub>1</sub>=240 `&#x2126;` and L<sub>1</sub>=0.12 H" ,
+        "c": "R<sub>1</sub>=340 `&#x2126;` and L<sub>1</sub>=0.125 H" ,
+        "d": "R<sub>1</sub>=440 `&#x2126;` and L<sub>1</sub>=0.102 H" 
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (b).",
+        "b": "You have choosen option (b). The answer is correct.",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (b).",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (b)."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "The instrument which measures the total quantity of electricity delivered in a particular time is",
+      "answers": {
+        "a": "Indicating",
+        "b": "Absolute" ,
+        "c": "Integrating" ,
+        "d": "Recording" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (c).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (c).",
+        "c": "You have choosen option (c). The answer is correct.",
+        "d": "You have choosen option (d). The answer is incorrect. The correct option is (c)."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+     {
+      "question": "A Maxwell's capacitance bridge is used to measure an unknown inductance in comparison with capacitance. The various values at balance: R<sub>2</sub>=500`&#x2126;`, R<sub>3</sub>=500`&#x2126;`, R<sub>4</sub>=1000`&#x2126;` ; C<sub>4</sub>=0.5uF. Calculate the values of R<sub>1</sub> and L<sub>1</sub>",
+      "answers": {
+        "a": "R<sub>1</sub>=240 `&#x2126;` and L<sub>1</sub>=0.120 H",
+        "b": "R<sub>1</sub>=350 `&#x2126;` and L<sub>1</sub>=0.125 H" ,
+        "c": "R<sub>1</sub>=200 `&#x2126;` and L<sub>1</sub>=0.125 H" ,
+        "d": "R<sub>1</sub>=250 `&#x2126;` and L<sub>1</sub>=0.125 H" 
+      },
+      "explanations": {
+        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
+        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
+        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
+        "d": "You have choosen option (d). The answer is correct."
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]

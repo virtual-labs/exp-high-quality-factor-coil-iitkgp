@@ -1,13 +1,116 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<!--<a href="./thevenin_website.html" target="popup" onclick="window.open('./thevenin_website.html','name','width=1350,height=675')">Open page in new window</a>
+-->
+<link rel="stylesheet" type="text/css" href="css/exp3_css.css">
+<script class="include" type="text/javascript" src="./jquery_files/jquery.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shCore.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushJScript.min.js"></script>
+<script type="text/javascript" src="./jquery_files/shBrushXml.min.js"></script>
+<script class="include" type="text/javascript" src="./jquery_files/jqplot.meterGaugeRenderer.min.js"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+<style> 
+#rcorners3 {
+    border-radius: 10px;
+    border: 2px solid #8AC007;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 5px;   
+}
+</style>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+</head>
+
+<body background="./images/pg_bg.gif"> 
+<script src="js/exp3_js.js"></script>
+<div id="whole_body" style=" position:relative; margin-left:auto; margin-right:auto; top:0px; width:1120px; height:800px">
+<div style="font-size:35px; text-align:center; height:60px"> <b>Measurement of Self-Inductance (High Quality factor ) by  Hay's  Bridge</b></div>
+<div id="description" style="background-color:#99CCFF; border-radius:10px; border:2px solid #8AC007; position:absolute; align:left; left:10px; width:620px;">
+	<h3>&nbsp <u>Procedure:</u> </h3>
+	 <ol type="1">
+		  <li>Set the voltage (V=3V) and Frequency (500Hz) and set the unknown inductor value from <b>'Set inductor value'</b> tab by clicking on <b>'set'</b> button.</li>
+		  <br><li>Then switch on the supply to get millivoltmeter deflection.</li>
+		  <br><li>Now vary the values of <b>R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub> and C<sub>4</sub></b>  from  the control box below or directly put the values in the boxes of respective elements.</li>
+		  <br><li>Observe the millivoltmeter pointer to achieve "Null".</li>
+		  <br><li>If "NULL" is achieved, switch to <b>'Measure inductor value'</b> tab and click on <b>'Simulate'</b>. Observe calculated values of 
+			unknown inductor (L<sub>x</sub>) and unknown internal resistance of the inductor. Also observe the Quality factor of the 
+			unknown coil, which is defined as `(2*pi*f*L)/R`.</li>
+	</ol> 
+	
+</div>
+
+<form name='f1'>
+
+<div id="ckt_values1" style="position:relative; border: 2px solid #8AC007; border-radius: 10px; left:650px; height:475px; width:450px">
+	<p>
+	<img src="./images/hay_ckt.jpg" alt="Tutorials Point" style="position:absolute; border-radius: 10px; top:0px;  right:0px; height:475px; width:450px"/>
+	<img id="myImage" onclick="changeImage()" src="./images/s1.png" style="cursor: pointer; position:absolute; height:50px; width:50px; top:375px;  right:270px;"/>
+	<div class="example-content" style="position:absolute; top:93px;  right:118px;">
+		<link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+		<div id="chart3" class="plot" style="background-color:transparent; width:250px; height:150px;"></div>
+		<script src="./jquery_files/js_metergauge.js"></script>
+	</div>
+	<input type="number" name="lx" id="lx" min="0" max="0.0030" step="1.0000E-5" value="0.003" style="background-color:transparent; position:absolute; top:66px;  right:327px; width:68px; border:none;" readonly="readonly">
+	<input type="number" name="r3" id="r3" min="1" max="1.1111E+7" step="1" value="1" onchange="pr3.value=this.value;  execute_ckt();" style="position:absolute; top:64px;  right:71px; width:70px">
+	<input type="number" name="r2" id="r2" min="1" max="1.1111E+7" step="1" value="1" onchange="pr2.value=this.value;  execute_ckt();" style="position:absolute; top:253px;  right:324px; width:70px">	
+	<input type="number" name="r4" id="r4"  min="1" max="1.1111E+7" step="1" value="1" onchange="pr4.value=this.value;  execute_ckt();" style="position:absolute; top:272px;  right:86px; width:78px">	
+	<input type="number" name="c4" id="c4" min="1.0000E-10" max="1.1111E-6" step="1.0000E-10" value="1.1111E-5" onchange="pc1.value=this.value;  execute_ckt();" style="position:absolute; top:221px;  right:41px; width:78px">	
+	
+	<input type="number" name="v1" value="3" id="v1" style="position:absolute; top:388px;  right:210px; width:50px">
+	<input type="number" name="f1" value="500" id="f1" style="position:absolute; top:388px;  right:160px; width:40px">
+	<input type="number" name="A1" value="0" id="A1" style="background-color:#E3DE84; text-align:center; position:absolute; top:213px;  right:207px; width:70px" readonly="readonly">
+	</p>
+</div>
+<!-- <div class="example-content" style="position:absolute; top:195px;  right:115px;">
+	<link rel="stylesheet" type="text/css" href="./jquery_files/css_metergauge.css">
+	<div id="chart3" class="plot" style="background-color:transparent; width:250px; height:150px;"></div>
+	<script src="./jquery_files/js_metergauge.js"></script>
+</div> -->
+<div style="position:absolute; top:350px;  left:10px;">
+<ul class="tabs" >
+        <li>
+          <input type="radio" checked name="tabs" id="tab1" onclick="clear_lx();">
+          <label for="tab1">Set Inductor value</label>
+          <div id="tab-content1" class="tab-content animated fadeIn">
+			<u>Set the actual values of L<sub>x</sub>:</u><br>
+			&nbsp Enter the L<sub>x</sub> values and click on the set button.<br> 
+			&nbsp&nbsp&nbspLx (in H):&nbsp 
+			<input type="button" value="Set" onclick="lx.value = c33.value;" style="text-align:center; cursor: pointer; background-color:#FE4080; width:90px; height:60px; font-size:18px; position:absolute; top:55px; right:20px;">
+ 
+			<input type="number" name="c33" id="c33" min="0" max="0.0030" step="1.0000E-5" value="0.003" onchange="pl1.value=this.value;" style="width:70px">
+			<br>0 H&nbsp <input type="range" name="pl1" id="pl1" min="0" max="0.0030" step="1.0000E-5" value="0.003" onchange="c33.value=this.value;" style=" width:300px"> &nbsp3 mH
+			</div>
+        </li>
+        <li>
+          <input type="radio" name="tabs" id="tab2" onclick="">
+          <label for="tab2">Measure inductor value</label>
+          <div id="tab-content2" class="tab-content animated fadeIn">
+            The current voltmeter reading is: 
+			<input type="number" name="A2" value="" id="A2" style="background-color:#E3DE84; text-align:center; width:60px" readonly="readonly"> &nbsp mv. Now simulate to get:
+			
+			<br>&nbsp&nbsp&nbsp&nbsp Inductor value (in mH):
+			<input type="number" name="c333" value="" id="c333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<br> Resistance value (in ohm):
+			<input type="number" name="r333" value="" id="r333" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<br> Quality Factor of unknown coil:
+			<input type="number" name="rd33" value="" id="rd33" style="background-color:#E3DE84; text-align:center;  width:120px" readonly="readonly">
+			<input type="button" value="Simulate" onclick="simulate_rc()" style="cursor: pointer; background-color:#FE4080; text-align:center; font-size: 25px; position:absolute; top:50px; right:20px; width:150px; height:55px">
+			
+          </div>
+        </li>
+</ul>
+</div>
+<div id="rcorners3" style="background: url(./images/bg5.jpg); position:absolute; top:550px; right:10px; width:450px; color:#FFFFFF" align="center">
+	<b>CONTROLS</b><br>
+	R<sub>2</sub>(1 Ohm) <input type="range" name="pr2" id="pr2" min="1" max="1.1111E+7" step="1" value="1" onchange="r2.value=this.value;  execute_ckt();" style="width:290px">11.1 MOhm<BR>	
+	R<sub>3</sub>(1 Ohm) <input type="range" name="pr3" id="pr3" min="1" max="1.1111E+7" step="1" value="1" onchange="r3.value=this.value;  execute_ckt();" style="width:290px">11.1 MOhm<BR>	
+	R<sub>4</sub>(1 Ohm) <input type="range" name="pr4" id="pr4" min="1" max="1.1111E+7" step="1" value="1" onchange="r4.value=this.value;  execute_ckt();" style="width:290px">11.1 MOhm<BR>	
+	C<sub>4</sub>(10 nC) <input type="range" name="pc1" id="pc1" min="1.0000E-10" max="1.1111E-6" step="1.0000E-10" value="1.1111E-5" onchange="c4.value=this.value;  execute_ckt();" style=" width:290px">1.11 uC<br>
+<br>	
+</div>
+
+</form>
+</div>
 </body>
 </html>
