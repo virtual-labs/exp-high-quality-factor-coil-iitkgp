@@ -5,11 +5,12 @@
 - The Hay's bridge is a modification of Maxwell's bridge. The connection diagram is shown in figure 1. This bridge uses a resistance in series with the standard capacitor (unlike the Maxwell bridge which uses a resistance in parallel with capacitor).
 
 ### Circuit Diagram
+<div align="center">
+<img src="./images/hay_ckt.jpg"><br/>
+Fig 1: Circuit diagram for measurement of self inductance of high quality factor coil by Hay's bridge    
+</div>
 
-![Measurement of Self Inductance of High Quality Factor Coil by Hay's Bridge](images/hay_ckt.jpg)
-
-***Fig 1: Circuit diagram for measurement of self inductance of high quality factor coil by Hay's bridge***
-
+<br/><br/>
 Let,
      L<sub>1</sub>= Unknown inductance having resistance R<sub>1</sub>. <br>
      R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>= known non inductive resistance. <br>
